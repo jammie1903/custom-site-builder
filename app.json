@@ -1,0 +1,27 @@
+{
+  "name": "Custom Site Builder",
+  "description": "An app to build a site for a given user of the system",
+  "keywords": [
+    "site",
+    "build",
+    "custom"
+  ],
+  "repository": "https://github.com/jammie1903/custom-site-builder",
+  "success_url": "/",
+  "env": {
+    "USER_NAME": {
+      "description": "The Username for the owner of the site to be built."
+    },
+    "USER_PASSWORD": {
+      "description": "The Password for the owner of the site to be built."
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}
