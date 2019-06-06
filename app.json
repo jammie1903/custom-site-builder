@@ -9,11 +9,20 @@
   "repository": "https://github.com/jammie1903/custom-site-builder",
   "success_url": "/",
   "env": {
-    "USER_NAME": {
-      "description": "The Username for the owner of the site to be built."
+    "USER_EMAIL": {
+      "description": "The Email for the owner of the site to be built. If not provided, USER_TOKEN must be present",
+      "required": false
     },
     "USER_PASSWORD": {
-      "description": "The Password for the owner of the site to be built."
+      "description": "The Password for the owner of the site to be built. If not provided, USER_TOKEN must be present",
+      "required": false
+    },
+    "USER_TOKEN": {
+      "description": "The authenticated token to be used to determine the site owner. If not provided, USER_EMAIL and USER_PASSWORD must be present",
+      "required": false
+    },
+    "PROJECT_ID": {
+      "description": "The id of the project to be deployed, must be owned by the authenticated user"
     }
   },
   "buildpacks": [
