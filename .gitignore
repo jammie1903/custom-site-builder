@@ -63,3 +63,6 @@ typings/
 # gatsby files
 .cache
 public
+
+# temporary until i can determine why heroku doesnt like this being around 
+package-lock.json
